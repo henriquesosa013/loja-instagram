@@ -8,7 +8,7 @@ Este projeto ainda está em desenvolvimento, e esta é apenas a versão base. Ai
 # Objetivos futuros
 
 |Sistema de pagamentos|
--|Banco de dados mais estruturado|-
+- |Banco de dados mais estruturado| -
 |Melhorias de segurança|
 
 ## 📌 Status
