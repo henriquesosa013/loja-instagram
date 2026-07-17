@@ -6,6 +6,7 @@ Criei este projeto porque percebi que muitas lojas de seguidores para Instagram 
 Este projeto ainda está em desenvolvimento, e esta é apenas a versão base. Ainda há muitas funcionalidades e melhorias que serão adicionadas.
 
 # Objetivos futuros
+
 -Sistema de pagamentos
 -Banco de dados mais estruturada
 -Melhorias de segurança
