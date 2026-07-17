@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedido Confirmado - Seguidores Rapidos Baratos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="logo-icone">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4.2"/>
+                    <circle cx="17.3" cy="6.7" r="1.2" fill="white" stroke="none"/>
+                </svg>
+            </span>
+            SEGUIDORESBARATOSRAPIDO
+        </div>
+    </header>
+
+    <section class="checkout-section">
+        <div class="checkout-card">
+            <div class="checkout-icon">&#10003;</div>
+            <h1>Pedido Confirmado!</h1>
+            <p>Aguarde o codigo PIX para finalizar o pagamento.</p>
+
+            <div class="checkout-dados">
+                <div class="checkout-linha">
+                    <span>Pedido:</span>
+                    <strong>#{{ order.id[:8] }}</strong>
+                </div>
+                <div class="checkout-linha">
+                    <span>Categoria:</span>
+                    <strong>{{ order.categoria }}</strong>
+                </div>
+                <div class="checkout-linha">
+                    <span>Quantidade:</span>
+                    <strong>{{ order.quantidade }}</strong>
+                </div>
+                <div class="checkout-linha">
+                    <span>Instagram:</span>
+                    <strong>@{{ order.instagram }}</strong>
+                </div>
+                <div class="checkout-linha">
+                    <span>Telefone:</span>
+                    <strong>{{ order.telefone }}</strong>
+                </div>
+                <div class="checkout-linha">
+                    <span>Email:</span>
+                    <strong>{{ order.email }}</strong>
+                </div>
+                <div class="checkout-linha">
+                    <span>Valor:</span>
+                    <strong class="checkout-preco">R$ {{ order.preco }}</strong>
+                </div>
+            </div>
+
+            <div class="checkout-qr">
+                <div class="qr-placeholder">
+                    <p>QR Code do Mercado Pago</p>
+                    <p class="qr-aviso">Integracao pendente</p>
+                </div>
+            </div>
+
+            <p class="checkout-info">Apos a confirmacao do pagamento, seu pedido sera processado automaticamente.</p>
+
+            <a href="{{ url_for('index') }}" class="btn-voltar">Voltar a Loja</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 seguidoresbaratosrapido. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
